@@ -50,9 +50,6 @@ module.exports = {
                   '100': '#479087',
                   '200': '#7AB9B1',
               },
-              customGreen: {
-                  200: '#2D776D',
-              }
           },
           minWidth: {
               '11': '10.5rem',//168 Today M
@@ -131,10 +128,6 @@ module.exports = {
               '50': '9.25rem',//148px
               '57': '3.562rem',
           },
-          spacing: {
-            '11px': '11px',
-            '6px' : '6px',
-           },
 
           borderWidth: {
               '10': '10px'
