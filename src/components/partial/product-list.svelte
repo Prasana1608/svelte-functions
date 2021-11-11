@@ -1,16 +1,16 @@
 <script>
-    import ProductDetails from "../partial/product-details.svelte";
+    import ProductDetails from "./product-details.svelte";
     let gridView = true;
     const toggleBool = () => gridView = !gridView;
 	let products = [1,2,3,4,5];
-    const filter = '<svg class="mr-5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.80431 2.5C3.08423 2.5 2.5 3.09405 2.5 3.82534V4.60537C2.5 5.14706 2.70599 5.66798 3.07446 6.05981L7.11258 10.3536L7.11436 10.3509C7.89393 11.149 8.33254 12.2279 8.33254 13.3528V17.1626C8.33254 17.4172 8.59891 17.5798 8.82 17.4597L11.1196 16.2066C11.4668 16.017 11.6834 15.6486 11.6834 15.2487V13.3428C11.6834 12.2242 12.1158 11.1499 12.8883 10.3536L16.9264 6.05981C17.294 5.66798 17.5 5.14706 17.5 4.60537V3.82534C17.5 3.09405 16.9167 2.5 16.1966 2.5H3.80431Z" stroke="#1C1D25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';  
+    import Filter from "../icons/Filter-3.svelte"
 </script>
 
     <div>
         <div class="flex px-4">
             <input type="search" class=" w-4/5 py-4 border-r" placeholder="Search in personal care">
             <div class="flex justify-end w-1/5 items-center align-middle">
-                {@html filter}
+                <Filter/>
                 {#if gridView}
                 <svg on:click={toggleBool} width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.25" y="1.25" width="15.6818" height="4.77273" rx="1.75" stroke="#1C1D25" stroke-width="1.5"/><rect x="1.25" y="9.97729" width="15.6818" height="4.77273" rx="1.75" stroke="#1C1D25" stroke-width="1.5"/></svg>
                 {:else}

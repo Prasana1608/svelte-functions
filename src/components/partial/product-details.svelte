@@ -2,22 +2,22 @@
     import AddToCart from "../partial/add-to-cart.svelte";
     import MarginPercentage from "../partial/margin-percentage.svelte";
     import Select from "../core/select.svelte";
+    import Option from "../icons/3-dot-menu.svelte"
     let selected;
     let src = 'brush.png';
-    export const option = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="1.62917" transform="matrix(0 -1 -1 0 12.125 17.875)" fill="#C5C5C5" stroke="#C5C5C5" stroke-width="0.991667"/><circle r="1.62917" transform="matrix(0 -1 -1 0 12.125 11.5)" fill="#C5C5C5" stroke="#C5C5C5" stroke-width="0.991667"/><circle r="1.62917" transform="matrix(0 -1 -1 0 12.125 5.125)" fill="#C5C5C5" stroke="#C5C5C5" stroke-width="0.991667"/></svg>';
     export let view;
 </script>
-{#if view}
-<div class="bg-white p-3 pb-4 flex flex-row mx-4">
-    <div class="flex flex-col align-top items-center w-2/5">
+<!-- {#if view} -->
+<div class="bg-white p-3 pb-4 flex {view ? "mx-4 flex-row": "flex-col w-1/2 relative"}">
+    <div class="flex flex-col align-top {view ? "items-center w-2/5": "items-start"}">
         <MarginPercentage/>
-        <figure>
+        <figure class="{view ? "": "mx-auto max-w-full"}">
             <img {src} alt="brush"/>
         </figure>
     </div>
-    <div class="flex flex-col items-end align-baseline ml-3 w-4/5">
-        <figure class="mr-0">
-            {@html option}
+    <div class="flex flex-col items-end align-baseline {view ? "ml-3 w-4/5": "mt-3"}">
+        <figure class="{view ? "mr-0 ": "absolute top-3 right-3"}">
+            <Option/>
         </figure>
         <div class="w-full">
             <h3 class="text-size13 leading-5 font-medium text-customGray-800 w-40 my-2 mb-3">Ajay Quest Tooth Brush TB-101 </h3>
@@ -31,7 +31,7 @@
     </div>
 
 </div>
-{:else}
+<!-- {:else}
 <div class="bg-white p-3 pb-4 flex flex-col w-1/2 relative">
     <div class="flex flex-col align-top items-start">
         <MarginPercentage/>
@@ -55,4 +55,4 @@
     </div>
 
 </div>
-{/if}
+{/if} -->
