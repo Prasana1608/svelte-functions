@@ -7,9 +7,9 @@
 </script>
 
     <div>
-        <div class="flex px-4">
+        <div class="flex px-4 bg-white">
             <input type="search" class=" w-4/5 py-4 border-r" placeholder="Search in personal care">
-            <div class="flex justify-end w-1/5 items-center align-middle">
+            <div class="flex justify-around w-1/5 items-center align-middle">
                 <Filter/>
                 {#if gridView}
                 <svg on:click={toggleBool} width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.25" y="1.25" width="15.6818" height="4.77273" rx="1.75" stroke="#1C1D25" stroke-width="1.5"/><rect x="1.25" y="9.97729" width="15.6818" height="4.77273" rx="1.75" stroke="#1C1D25" stroke-width="1.5"/></svg>
@@ -27,7 +27,7 @@
             {/each}
         </ul>
             {:else}
-        <ul class="flex flex-wrap justify-between">
+        <ul class="flex flex-wrap justify-between mx-4 mt-3">
             {#each products as product}
                 <ProductDetails view = {gridView}/>
             {/each}

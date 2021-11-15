@@ -3,7 +3,7 @@
 	import Header from "../components/partial/header.svelte";
 	import CategorySlider from "../components/partial/category-slider.svelte";
 </script>
-<div>
+<div class=" bg-customGray-primary">
 	<Header/>
 	<CategorySlider/>
 	<ProductList/>
