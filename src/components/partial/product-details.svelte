@@ -15,7 +15,7 @@
         </figure>
     </div>
     <div class="flex flex-col items-end align-baseline {view ? "ml-3 w-4/5": "mt-3"}">
-        <figure class="{view ? "mr-0 ": "absolute top-3 right-3"}">
+        <figure class="{view ? "mr-0 ": "absolute top-2 right-1"}">
             <Option/>
         </figure>
         <div class="w-full">
@@ -23,7 +23,7 @@
             <Select view = {view} options={[{"text":"100g / 24 pcs bundle"},{"text":"50g / 12 pcs bundle"},{"text":"150g / 36 pcs bundle"}]}
                 display_func={o => o.text}
                 bind:value={selected}/>
-            <span class="text-xs text-customGray-500 font-normal mb-2">MRP  ₹1,920</span>
+            <span class="text-xs text-customGray-500 font-normal mb-2 ">MRP  ₹1,920</span>
         </div>
         <p class="w-full pb-3 text-size15">₹1,920<span class="ml-3 text-customOrange-800 text-xs">₹400/pc</span></p>
         <AddToCart/>
