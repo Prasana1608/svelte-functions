@@ -90,7 +90,8 @@ module.exports = {
               '104': '26rem', //416px
               '113': '28.25rem', //452px
               '150': '37.5rem', //600px
-              '34': '34px' //34px
+              '34': '34px', //34px
+              '48%': '48%' //48%
           },
           height: {
               '15': '4.25rem',//68px
@@ -134,6 +135,8 @@ module.exports = {
           spacing: {
             '11px': '11px',
             '6px' : '6px',
+            '9.4px': '9.4px',
+            '5.4px': '5.4px'
            },
 
           borderWidth: {
