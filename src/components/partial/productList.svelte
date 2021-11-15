@@ -20,7 +20,7 @@
 
             </div>
         </div>
-        <ul class={gridView ? "" : "flex flex-wrap justify-between mx-4 mt-3"}>
+        <ul class={gridView ? "" : "flex flex-wrap justify-between mx-4"}>
             {#each products as product}
                 <ProductDetails view = {gridView}/>
             {/each}

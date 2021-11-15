@@ -7,7 +7,7 @@
     let src = 'brush.png';
     export let view;
 </script>
-<div class="bg-white flex {view ? "mx-4 my-3 p-3 pb-4 rounded-md flex-row": "flex-col w-48% rounded-md relative p-2 my-2"}">
+<div class="bg-white flex {view ? "mx-4 my-3 p-3 pb-4 rounded-md flex-row": "flex-col w-48% rounded-md relative p-2 my-3"}">
     <div class="flex flex-col align-top {view ? "items-center w-2/5": "items-start"}">
         <MarginPercentage/>
         <figure class="{view ? "": "mx-auto max-w-full"}">
