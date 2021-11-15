@@ -1,9 +1,9 @@
 <script>
-    import ProductDetails from "./product-details.svelte";
+    import ProductDetails from "./productDetails.svelte";
     let gridView = true;
     const toggleBool = () => gridView = !gridView;
 	let products = [1,2,3,4,5];
-    import Filter from "../icons/Filter-3.svelte"
+    import Filter from "../icons/filterIcon.svelte"
 </script>
 
     <div>
@@ -20,18 +20,10 @@
 
             </div>
         </div>
-        {#if gridView}
-        <ul>
+        <ul class={gridView ? "" : "flex flex-wrap justify-between mx-4 mt-3"}>
             {#each products as product}
                 <ProductDetails view = {gridView}/>
             {/each}
         </ul>
-            {:else}
-        <ul class="flex flex-wrap justify-between mx-4 mt-3">
-            {#each products as product}
-                <ProductDetails view = {gridView}/>
-            {/each}
-        </ul>
-        {/if}
         
     </div>

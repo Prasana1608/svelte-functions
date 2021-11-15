@@ -1,7 +1,7 @@
 <script>
     import { counter } from '../../stores';
 	const count = counter();
-    import Wishlist from "../icons/Heart.svelte";
+    import Wishlist from "../icons/heartIcon.svelte";
     export let view;
 </script>
 <div class="flex align-middle items-center w-full">

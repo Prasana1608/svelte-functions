@@ -1,9 +1,9 @@
 <script>
-    import Notification from '../icons/Notification.svelte';
-    import Search from '../icons/Search.svelte';
-    import Buy from '../icons/Buy.svelte';
-    import Down from '../icons/Down.svelte';
-    import ArrowRight from '../icons/arrow-right 1.svelte';
+    import Notification from '../icons/notificationIcon.svelte';
+    import Search from '../icons/searchIcon.svelte';
+    import Buy from '../icons/buyCart.svelte';
+    import Down from '../icons/downArrow.svelte';
+    import ArrowRight from '../icons/rightArrow.svelte';
 </script>
 <div class="px-4 flex justify-between align-middle items-center py-4">
     <div class="flex align-middle items-center">

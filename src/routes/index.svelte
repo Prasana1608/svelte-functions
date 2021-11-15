@@ -1,7 +1,7 @@
 <script>
-	import ProductList from "../components/partial/product-list.svelte";
-	import Header from "../components/partial/header.svelte";
-	import CategorySlider from "../components/partial/category-slider.svelte";
+	import ProductList from "../components/partial/productList.svelte";
+	import Header from "../components/partial/headerComponent.svelte";
+	import CategorySlider from "../components/partial/categorySlider.svelte";
 </script>
 <div class=" bg-customGray-primary">
 	<Header/>

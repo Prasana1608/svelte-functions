@@ -1,8 +1,8 @@
 <script>
-    import AddToCart from "../partial/add-to-cart.svelte";
-    import MarginPercentage from "../partial/margin-percentage.svelte";
-    import Option from "../icons/3-dot-menu.svelte"
-    import Select from "../core/select.svelte";
+    import AddToCart from "./addCart.svelte";
+    import MarginPercentage from "./marginPercentage.svelte";
+    import Option from "../icons/3DotMenu.svelte"
+    import Select from "../core/selectComponent.svelte";
     let selected;
     let src = 'brush.png';
     export let view;
@@ -28,5 +28,4 @@
         <p class="w-full pb-3 text-size15">₹1,920<span class="ml-3 text-customOrange-800 text-xs">₹400/pc</span></p>
         <AddToCart/>
     </div>
-
 </div>
