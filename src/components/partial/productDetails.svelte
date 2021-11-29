@@ -1,11 +1,19 @@
 <script>
+    import { counter } from '../../stores';  
+	let count = counter();
     import AddToCart from "./addCart.svelte";
     import MarginPercentage from "./marginPercentage.svelte";
     import Option from "../icons/3DotMenu.svelte"
     import Select from "../core/selectComponent.svelte";
     let selected;
     let src = 'brush.png';
+    const i = 0;
     export let view;
+    export let id;
+    export let cartcount;
+    export let product;
+    export let cart;
+    
 </script>
 <div class="bg-white flex {view ? "mx-4 my-3 p-3 pb-4 rounded-md flex-row": "flex-col w-48% rounded-md relative p-2 my-3"}">
     <div class="flex flex-col align-top {view ? "items-center w-2/5": "items-start"}">
@@ -26,6 +34,6 @@
             <span class="text-xs text-customGray-500 font-normal mb-2 ">MRP  ₹1,920</span>
         </div>
         <p class="w-full pb-3 text-size15">₹1,920<span class="ml-3 text-customOrange-800 text-xs">₹400/pc</span></p>
-        <AddToCart/>
+        <AddToCart bind:cart product = {product} cartcount = {cartcount} view = {view}/>
     </div>
 </div>

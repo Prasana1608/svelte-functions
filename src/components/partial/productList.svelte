@@ -2,8 +2,11 @@
     import ProductDetails from "./productDetails.svelte";
     let gridView = true;
     const toggleBool = () => gridView = !gridView;
-	let products = [1,2,3,4,5];
-    import Filter from "../icons/filterIcon.svelte"
+	let products = [{id: 1, quantity: 1},{id: 2, quantity: 1},{id: 3, quantity: 1},];
+    import Filter from "../icons/filterIcon.svelte";
+    import { cartcounter } from '../../stores';
+    const cartcount = cartcounter();
+    let cart = [];
 </script>
 
     <div>
@@ -21,8 +24,8 @@
             </div>
         </div>
         <ul class={gridView ? "" : "flex flex-wrap justify-between mx-4"}>
-            {#each products as product}
-                <ProductDetails view = {gridView}/>
+            {#each products as product, i}
+                <ProductDetails bind:cart product={product} view = {gridView} id= {product.id} cartcount = {cartcount}/>
             {/each}
         </ul>
         
